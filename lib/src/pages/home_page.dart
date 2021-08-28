@@ -26,7 +26,8 @@ Widget _lista() {
     
        print(snapshot.data);
      return ListView(
-    children: _listaItems( snapshot.data ),
+       //snapshot.data
+    //children: _listaItems( snapshot.data ),
      );
    },
   );
