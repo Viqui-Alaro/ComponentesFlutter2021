@@ -1,55 +1,53 @@
-import 'package:componentes/src/providers/menu_provider.dart';
 import 'package:flutter/material.dart';
-
-
+ 
+import 'package:componentes/src/providers/menu_provider.dart';
+ 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Componentes'),
-
+        title: Text('Components'),
       ),
-      body: _lista(),
+      body: _list(),
     );
   }
-
-Widget _lista() {
-
-  return FutureBuilder(
-    future: menuProvider.cargarData(),
-   // initialData: [],
-    // initialData: [],
-   builder: (context, AsyncSnapshot<List<dynamic>> snapshot){
-    
-       print(snapshot.data);
-     return ListView(
-       //snapshot.data
-    //children: _listaItems( snapshot.data ),
-     );
-   },
-  );
-}
-
-
-
-
- List<Widget> _listaItems(List<dynamic> data) {
-    final List<Widget> opciones = [];
-    data.forEach((element) { 
-      final widgetTemp = ListTile(
+ 
+  Widget _list() {
+    return FutureBuilder(
+      future: menuProvider.cargarData(),
+      initialData: [],
+      builder: (context, AsyncSnapshot<List<dynamic>> snapshot) {
+        if (snapshot.hasError) {
+          return Center(child: Text('Error'));
+        }
+ 
+        if (!snapshot.hasData) {
+          return Center(child: Text('No hay data'));
+        }
+ 
+        return ListView(
+          children: _getListItems(snapshot.data),
+        );
+      },
+    );
+  }
+ 
+ 
+  List<Widget> _getListItems(List<dynamic>? items) {
+    final List<Widget> options = [];
+ 
+    items?.forEach((element) {
+      final tmp = ListTile(
         title: Text(element['texto']),
-        leading: Icon(Icons.ac_unit_rounded, color: Colors.amber),
-        trailing: Icon(Icons.ac_unit_rounded, color: Colors.amber),
-        onTap: (){
-
-        },
+        leading: Icon(Icons.account_circle, color: Colors.blue),
+        trailing: Icon(Icons.keyboard_arrow_right, color: Colors.blue),
+        onTap: () {},
       );
-      opciones..add(widgetTemp)
-              ..add(Divider());
+ 
+      options..add(tmp)..add(Divider());
     });
-    return opciones;
+ 
+    return options;
   }
 }
