@@ -18,10 +18,10 @@ class MyApp extends StatelessWidget {
       //home: HomePage(),
       initialRoute: '/',
       routes:<String,WidgetBuilder>{
-        '/' : ( BuildContext context) => HomePage(),
-        'alert' : ( BuildContext context) => AlertPage(),
-        'avatar' : ( BuildContext context) => AvatarPage(),
-        'card': (BuildContext context) => CardPage(),
+        '/'      :  ( BuildContext context) => HomePage(),
+        'alert'  :  ( BuildContext context) => AlertPage(),
+        'avatar' :  ( BuildContext context) => AvatarPage(),
+        'card'   :  (BuildContext context) => CardPage(),
       }
     );
   }
