@@ -1,4 +1,5 @@
 
+import 'package:componentes/src/pages/card_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         '/' : ( BuildContext context) => HomePage(),
         'alert' : ( BuildContext context) => AlertPage(),
         'avatar' : ( BuildContext context) => AvatarPage(),
+        'card': (BuildContext context) => CardPage(),
       }
     );
   }
