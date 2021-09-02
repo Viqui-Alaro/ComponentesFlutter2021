@@ -59,8 +59,9 @@ Widget  _cardTipo1() {
 Widget  _cardTipo2() {
   return Column(
     children: <Widget> [
-     // FadeInImage(
-       // placeholder: placeholder, image: image),
+      FadeInImage(
+        placeholder: AssetImage('assets/jar-loading.gif'), 
+        image:  NetworkImage('https://i0.wp.com/www.lenda.net/wp-content/uploads/2018/09/travel-landscape-01.jpg')),
      // Image(image: NetworkImage('https://i0.wp.com/www.lenda.net/wp-content/uploads/2018/09/travel-landscape-01.jpg')),
       Container(
         padding: EdgeInsets.all(10.0),
