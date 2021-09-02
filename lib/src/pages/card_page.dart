@@ -15,7 +15,9 @@ class CardPage extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.all(10.0),
         children:<Widget> [
-          _cardTipo1()
+          _cardTipo1(),
+          SizedBox(height: 30.0),
+          _cardTipo2()
         ],
       ),
     );
@@ -52,4 +54,13 @@ Widget  _cardTipo1() {
     ),
   );
 }
+
+
+Widget  _cardTipo2() {
+  return Column(
+    children: <Widget> [
+      Image(image: NetworkImage('https://i0.wp.com/www.lenda.net/wp-content/uploads/2018/09/travel-landscape-01.jpg'))
+    ],
+  );
+ }
 }
