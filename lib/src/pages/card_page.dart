@@ -61,8 +61,11 @@ Widget  _cardTipo2() {
     children: <Widget> [
       FadeInImage(
         placeholder: AssetImage('assets/jar-loading.gif'), 
-        image:  NetworkImage('https://i0.wp.com/www.lenda.net/wp-content/uploads/2018/09/travel-landscape-01.jpg')),
-     // Image(image: NetworkImage('https://i0.wp.com/www.lenda.net/wp-content/uploads/2018/09/travel-landscape-01.jpg')),
+        image:  NetworkImage('https://i0.wp.com/www.lenda.net/wp-content/uploads/2018/09/travel-landscape-01.jpg'),
+        fadeInDuration: Duration(milliseconds: 200),
+        fit: BoxFit.cover,
+        height: 300.0,),
+
       Container(
         padding: EdgeInsets.all(10.0),
         child: Text('Hola mundo '))
