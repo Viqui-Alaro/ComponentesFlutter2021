@@ -59,7 +59,12 @@ Widget  _cardTipo1() {
 Widget  _cardTipo2() {
   return Column(
     children: <Widget> [
-      Image(image: NetworkImage('https://i0.wp.com/www.lenda.net/wp-content/uploads/2018/09/travel-landscape-01.jpg'))
+     // FadeInImage(
+       // placeholder: placeholder, image: image),
+     // Image(image: NetworkImage('https://i0.wp.com/www.lenda.net/wp-content/uploads/2018/09/travel-landscape-01.jpg')),
+      Container(
+        padding: EdgeInsets.all(10.0),
+        child: Text('Hola mundo '))
     ],
   );
  }
