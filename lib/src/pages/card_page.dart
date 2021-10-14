@@ -59,7 +59,11 @@ Widget  _cardTipo1() {
 
 
 Widget  _cardTipo2() {
-  return Column(
+
+final card =  Card(
+   // clipBehavior:  Clip.antiAlias,
+    
+    child: Column(
     children: <Widget> [
       FadeInImage(
         placeholder: AssetImage('assets/jar-loading.gif'), 
@@ -72,6 +76,13 @@ Widget  _cardTipo2() {
         padding: EdgeInsets.all(10.0),
         child: Text('Hola mundo '))
     ],
+  )
+
   );
+
+  return Container(
+    child:card ,
+  );
+
  }
 }
