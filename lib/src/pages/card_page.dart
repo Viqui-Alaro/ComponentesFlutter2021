@@ -60,7 +60,7 @@ Widget  _cardTipo1() {
 
 Widget  _cardTipo2() {
 
-final card =  Card(
+final card =  Container(
    // clipBehavior:  Clip.antiAlias,
     
     child: Column(
@@ -81,7 +81,20 @@ final card =  Card(
   );
 
   return Container(
-    child:card ,
+   
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(30.0),
+      boxShadow: <BoxShadow>[
+        BoxShadow(
+          color: Colors.red
+        )
+       ]
+     
+    ),
+     child: ClipRRect(
+       borderRadius: BorderRadius.circular(30.0),
+       child: card,
+     ) ,
   );
 
  }
