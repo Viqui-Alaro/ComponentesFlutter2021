@@ -73,7 +73,7 @@ final card =  Container(
         height: 300.0,),
 
       Container(
-        padding: EdgeInsets.all(10.0),
+        padding: EdgeInsets.all(15.0),
         child: Text('Hola mundo '))
     ],
   )
@@ -84,9 +84,13 @@ final card =  Container(
    
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(30.0),
+      color: Colors.white,
       boxShadow: <BoxShadow>[
         BoxShadow(
-          color: Colors.red
+          color: Colors.black26,
+          blurRadius: 10.0,
+          spreadRadius: 2.0,
+          offset: Offset(2.0,-10.0)
         )
        ]
      
