@@ -17,7 +17,7 @@ import 'package:flutter/material.dart';
           onPressed:()=> _mostrarAlert(context),
           child: Text('Mostrar Alerta'),
           style: ElevatedButton.styleFrom(
-            primary: Colors.red,
+            primary: Colors.blue,
             shape: StadiumBorder()
           ),
           )
@@ -37,6 +37,7 @@ import 'package:flutter/material.dart';
       barrierDismissible: true,
       builder: (context){
         return AlertDialog(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
           title: Text('Titulo'),
           content: Column(
             mainAxisSize: MainAxisSize.min,
@@ -47,10 +48,12 @@ import 'package:flutter/material.dart';
           ),
           actions: <Widget>[
             TextButton(child: Text('Cancelar'),
-            onPressed: (){},
+            onPressed: ()=>
+            Navigator.of(context).pop(),
             ),
             TextButton(child: Text('Ok'),
-            onPressed: (){},
+            onPressed: ()=>
+            Navigator.of(context).pop(),
             )
           ],
         );
