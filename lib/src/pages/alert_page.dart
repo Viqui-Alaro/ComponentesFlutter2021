@@ -38,7 +38,21 @@ import 'package:flutter/material.dart';
       builder: (context){
         return AlertDialog(
           title: Text('Titulo'),
-          content: Text('Contenido'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Text('Este es el contenido de la caja de la alerta'),
+              FlutterLogo(size: 100.0)
+            ],
+          ),
+          actions: <Widget>[
+            TextButton(child: Text('Cancelar'),
+            onPressed: (){},
+            ),
+            TextButton(child: Text('Ok'),
+            onPressed: (){},
+            )
+          ],
         );
       }
     );
