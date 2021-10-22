@@ -42,7 +42,7 @@ import 'package:flutter/material.dart';
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              Text('Este es el contenido de la caja de la alerta'),
+              Text('Es una alerta de la caja'),
               FlutterLogo(size: 100.0)
             ],
           ),
