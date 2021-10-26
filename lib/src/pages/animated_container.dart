@@ -1,4 +1,6 @@
 
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 
@@ -35,8 +37,27 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
           ),
 
         ),
+        
       ),
-
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.play_arrow),
+        onPressed: _cambiarForma,
+      ),
     );
+  }
+
+  void _cambiarForma() {
+   
+   final random = Random();
+    setState(() {
+       _width +=random.nextInt(300).toDouble();
+    _height +=random.nextInt(300).toDouble();
+    _color = Color.fromRGBO(
+      random.nextInt(255),
+      random.nextInt(255),
+      random.nextInt(255),
+      1
+    );
+    });
   }
 }
