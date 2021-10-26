@@ -56,8 +56,8 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
       random.nextInt(255),
       random.nextInt(255),
       random.nextInt(255),
-      1
-    );
+      1 );
+      _borderRadius = BorderRadius.circular(random.nextInt(100).toDouble());
     });
   }
 }
