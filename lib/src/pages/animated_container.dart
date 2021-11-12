@@ -28,7 +28,9 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
 
       ),
       body: Center(
-        child: Container(
+        child: AnimatedContainer(
+          duration: Duration(seconds: 1),
+          curve: Curves.fastLinearToSlowEaseIn,
           width: _width,
           height: _height,
           decoration: BoxDecoration(
