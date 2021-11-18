@@ -25,6 +25,8 @@ class _InputPageState extends State<InputPage> {
   }
 
   Widget _crearInput() {
-    return TextField();
+    return TextField(
+      textCapitalization: TextCapitalization.sentences,
+    );
   }
 }
