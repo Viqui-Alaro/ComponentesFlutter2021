@@ -16,6 +16,7 @@ class _InputPageState extends State<InputPage> {
         title: Text('Inputs de texto'),
       ),
       body: ListView(
+        padding: EdgeInsets.symmetric(horizontal: 10.0,vertical:20.0 ),
         children: <Widget>[
           _crearInput(),
         ],
