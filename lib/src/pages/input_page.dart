@@ -9,6 +9,9 @@ class InputPage extends StatefulWidget {
 }
 
 class _InputPageState extends State<InputPage> {
+
+  String _nombre;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,6 +41,10 @@ class _InputPageState extends State<InputPage> {
         suffixIcon: Icon(Icons.accessibility),
         icon: Icon(Icons.account_circle)
       ),
+      onChanged: (valor){
+          _nombre = valor;
+          print(_nombre);
+      },
     );
   }
 }
