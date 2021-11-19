@@ -27,6 +27,17 @@ class _InputPageState extends State<InputPage> {
   Widget _crearInput() {
     return TextField(
       textCapitalization: TextCapitalization.sentences,
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20.0)
+        ),
+        counter: Text("Letras0"),
+        hintText: 'NOmbre',
+        labelText: 'Nombre,',
+        helperText: "Solo es un mane",
+        suffixIcon: Icon(Icons.accessibility),
+        icon: Icon(Icons.account_circle)
+      ),
     );
   }
 }
