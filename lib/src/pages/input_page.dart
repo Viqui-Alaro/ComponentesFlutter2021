@@ -10,7 +10,7 @@ class InputPage extends StatefulWidget {
 
 class _InputPageState extends State<InputPage> {
 
-  String _nombre;
+  String _nombre="";
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +22,8 @@ class _InputPageState extends State<InputPage> {
         padding: EdgeInsets.symmetric(horizontal: 10.0,vertical:20.0 ),
         children: <Widget>[
           _crearInput(),
+          Divider(),
+          _crearEmail(),
           Divider(),
           _crearPersona()
         ],
@@ -51,6 +53,28 @@ class _InputPageState extends State<InputPage> {
     );
   }
 
+
+  Widget _crearEmail(){
+     return TextField(
+      textCapitalization: TextCapitalization.sentences,
+      decoration: InputDecoration(
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20.0)
+        ),
+        counter: Text("Letras ${ _nombre.length}"),
+        hintText: 'NOmbre',
+        labelText: 'Nombre,',
+        helperText: "Solo es un mane",
+        suffixIcon: Icon(Icons.accessibility),
+        icon: Icon(Icons.account_circle)
+      ),
+      onChanged: (valor){
+        setState(() {
+           _nombre = valor;
+        });
+      },
+    );
+  }
 
   Widget _crearPersona(){
     return ListTile(
