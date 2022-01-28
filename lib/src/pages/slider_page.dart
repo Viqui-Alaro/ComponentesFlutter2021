@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 
-class SliderScreen extends StatelessWidget{
+class SliderScreen extends StatefulWidget{
 
   const SliderScreen({Key? key}):super(key: key);
-  
+
+  @override
+  _SliderScreenState createState() => _SliderScreenState();
+}
+
+class _SliderScreenState extends State<SliderScreen> {
+  double _sliderValue = 100;
  @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -13,13 +19,18 @@ class SliderScreen extends StatelessWidget{
       body: Column(
         children: [
           Slider(
-            value: 100, 
+            min: 50,
+            max: 400,
+            value: _sliderValue, 
             onChanged: (value){
+             _sliderValue=value;
+             setState(() {
+          
+             });
               
             })
         ],
       )
     ) ;
   }
-
 }
