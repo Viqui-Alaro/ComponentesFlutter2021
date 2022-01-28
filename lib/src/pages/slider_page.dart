@@ -6,10 +6,19 @@ class SliderScreen extends StatelessWidget{
   
  @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('HomeScreen'),
+    return  Scaffold(
+      appBar: AppBar(
+        title: const Text('Sliders & Checks'),
       ),
+      body: Column(
+        children: [
+          Slider(
+            value: 100, 
+            onChanged: (value){
+              
+            })
+        ],
+      )
     ) ;
   }
 
