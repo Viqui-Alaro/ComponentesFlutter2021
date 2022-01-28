@@ -18,7 +18,7 @@ class _SliderScreenState extends State<SliderScreen> {
       ),
       body: Column(
         children: [
-          Slider(
+          Slider.adaptive(
             min: 50,
             max: 400,
             value: _sliderValue, 
@@ -28,7 +28,12 @@ class _SliderScreenState extends State<SliderScreen> {
           
              });
               
-            })
+            }),
+            Image(
+              image: NetworkImage('https://www.buenamusica.com/media/fotos/cantantes/biografia/selena-gomez.jpg'),
+              fit: BoxFit.contain,
+              width: _sliderValue,
+              )
         ],
       )
     ) ;
