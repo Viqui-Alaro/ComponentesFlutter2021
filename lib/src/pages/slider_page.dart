@@ -1,9 +1,8 @@
-import 'dart:html';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget{
+class SliderScreen extends StatelessWidget{
 
-  const HomeScreen({Key? key}):super(key: key);
+  const SliderScreen({Key? key}):super(key: key);
   
  @override
   Widget build(BuildContext context) {
